@@ -206,6 +206,57 @@ const initBody1Interactions = () => {
     });
 };
 
+const initBody3Hero = () => {
+    const slider = document.querySelector('.body3-hero');
+
+    if (!slider) return;
+
+    if (typeof Swiper !== 'undefined') {
+        const body3HeroSwiper = new Swiper(slider, {
+            slidesPerView: 1,
+            initialSlide: 0,
+            loop: true,
+            speed: 700,
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            keyboard: {
+                enabled: true,
+                onlyInViewport: true,
+            },
+            a11y: {
+                enabled: true,
+                containerMessage: '시즌 컬렉션 자동 재생 이미지',
+                itemRoleDescriptionMessage: '이미지 슬라이드',
+            },
+        });
+
+        slider.addEventListener('focusin', () => body3HeroSwiper.autoplay.stop());
+        slider.addEventListener('focusout', () => body3HeroSwiper.autoplay.start());
+        return;
+    }
+
+    const slides = Array.from(slider.querySelectorAll('.body3-hero__slide'));
+    let activeIndex = 0;
+
+    if (slides.length < 2) return;
+
+    const showSlide = (index) => {
+        activeIndex = index % slides.length;
+        slides.forEach((slide, slideIndex) => {
+            const isActive = slideIndex === activeIndex;
+
+            slide.hidden = !isActive;
+            slide.setAttribute('aria-hidden', String(!isActive));
+        });
+    };
+
+    showSlide(0);
+    window.setInterval(() => showSlide(activeIndex + 1), 1000);
+};
+
 const initCategoryTabs = () => {
     const buttons = document.querySelectorAll('[data-category-tab]');
     const cards = document.querySelectorAll('[data-category]');
@@ -228,9 +279,9 @@ const initCategoryTabs = () => {
     });
 };
 
-const initBody3Rolling = () => {
-    document.querySelectorAll('.body3-showcase__rail').forEach((rail) => {
-        const originalSet = rail.querySelector('.body3-showcase__set');
+const initBody4Rolling = () => {
+    document.querySelectorAll('.body4-showcase__rail').forEach((rail) => {
+        const originalSet = rail.querySelector('.body4-showcase__set');
 
         if (!originalSet || rail.querySelector('[data-rolling-clone]')) return;
 
@@ -262,7 +313,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeroSlider();
     initBody1Slider();
     initBody1Interactions();
+    initBody3Hero();
     initCategoryTabs();
-    initBody3Rolling();
+    initBody4Rolling();
     initPreFooterRolling();
 });
