@@ -27,4 +27,11 @@ vercel.cmd
 
 빌드는 사이트 자산만 `dist`로 복사합니다. 임시 HTML, 브라우저 프로필, 캐시 및 개발용 파일은 공개 출력에 포함하지 않습니다. 배포 대상 업로드에서도 `.vercelignore`로 로컬 캐시와 임시 파일을 제외합니다.
 
-글꼴은 기존 Pretendard CDN을 사용하므로 네트워크 연결에 따라 시스템 sans-serif로 대체될 수 있습니다. `자동 재생 정지` 버튼은 영상, 슬라이더와 롤링 영역을 정지하며 기기의 모션 감소 설정도 반영합니다.
+글꼴은 기존 Pretendard CDN을 사용하므로 네트워크 연결에 따라 시스템 sans-serif로 대체될 수 있습니다. 기기의 모션 감소 설정을 반영하며, MASTERPIECE 카드에서는 공식 제품 스토리 요약과 상세 링크를 제공합니다.
++ main hero 3초간격으로 체인지 -> 마지막 -> 다시 1번 영상으로 무한 루프
++ top 버튼 hover 색상변경 -> 클릭시 main hero로 이동
++ more category , view more 버튼 -> hover 색상 변경
++ body1,2 부분 banner 2개 swiper
++ body1,2부분 컬러칩 누르면 옷 사진 변경, 하트 클릭 시 하트 채워짐
++ NEW body3 섹션 추가-> 이미지에 마우스 올리면 흰색 오버레이 호버
++ body4부분 card hover 변경

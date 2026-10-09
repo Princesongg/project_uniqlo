@@ -1984,6 +1984,16 @@ video {
         font-size: 12px;
     }
 
+    .body4-card__content h3,
+    .body4-card__content p,
+    .body4-card__content strong,
+    .body4-card__content small {
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
     .pre-footer {
         height: 140px;
     }
@@ -2000,6 +2010,27 @@ video {
 
     .pre-footer__label {
         font-size: 80px;
+    }
+}
+
+@media (max-width: 360px) {
+    .body4-card__content {
+        padding: 7px;
+        gap: 2px;
+    }
+
+    .body4-card__content h3 {
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    .body4-card__content p,
+    .body4-card__content small {
+        font-size: 9px;
+    }
+
+    .body4-card__content strong {
+        font-size: 11px;
     }
 }
 
