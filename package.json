@@ -1,0 +1,15 @@
+{
+  "name": "uniqlo-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "check": "node --check js/main.js && node scripts/validate.cjs",
+    "build": "npm run check && node scripts/build.cjs",
+    "test": "npm run build && node scripts/browser-test.cjs"
+  },
+  "devDependencies": {
+    "html-validate": "11.16.2",
+    "playwright": "1.64.0",
+    "postcss": "8.5.29"
+  }
+}

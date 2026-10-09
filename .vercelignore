@@ -1,0 +1,8 @@
+.git/
+.tmp-edge-desktop/
+.npm-cache/
+.qa-*
+node_modules/
+dist/
+temp.html
+project.md

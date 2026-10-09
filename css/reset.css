@@ -156,12 +156,14 @@ img {
     color: #fff;
     background-color: #000;
     transform: translateX(-50%);
+    clip-path: inset(50%);
     transition: top 0.2s ease;
 }
 
 #skipNav a:focus,
 #skipNav a:active {
     top: 0;
+    clip-path: none;
 }
 
 .swiper {
