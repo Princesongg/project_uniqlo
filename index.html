@@ -77,7 +77,10 @@
                 <a href="#" data-demo-feature="">회원가입</a>
               </li>
               <li class="site-header__utility-item" data-node-id="4027:5519">
-                <a href="#" data-demo-feature="">장바구니</a>
+                <a class="site-header__cart" href="#" data-demo-feature="" aria-label="장바구니">
+                  <span class="site-header__cart-label">장바구니</span>
+                  <img class="site-header__cart-icon" src="images/icon-cart.svg" alt="" width="24" height="24" aria-hidden="true" />
+                </a>
               </li>
               <li class="site-header__utility-item" data-node-id="4027:5520">
                 <button
@@ -190,9 +193,10 @@
             class="category-showcase__title"
             data-node-id="4042:203"
           >
-            CATEGORY
+            <span class="category-showcase__desktop-label">CATEGORY</span><span class="category-showcase__mobile-label">카테고리</span>
           </h2>
 
+          <div class="category-showcase__track">
           <div class="category-showcase__row" data-node-id="4028:231">
             <ul class="category-showcase__list" data-node-id="4028:232">
               <li class="category-showcase__item" data-node-id="4032:756">
@@ -398,6 +402,7 @@
             </ul>
           </div>
 
+          </div>
           <button
             class="category-showcase__more" data-demo-feature="상품 더 보기"
             type="button"
@@ -407,7 +412,7 @@
               class="category-showcase__more-icon"
               aria-hidden="true"
             ></span>
-            <span>MORE CATEGORY</span>
+            <span class="category-showcase__desktop-label">MORE CATEGORY</span><span class="category-showcase__mobile-label">더보기</span>
           </button>
         </section>
 
@@ -480,7 +485,7 @@
                   </ul>
                 </div>
 
-                <article class="body1__product" data-node-id="4071:1196">
+                <div class="body1__products"><article class="body1__product" data-node-id="4071:1196">
                   <div class="body1__product-photo">
                     <img
                       src="images/outer_1.jpg"
@@ -596,7 +601,7 @@
                       </div>
                     </div>
                   </div>
-                </article>
+                </article></div>
               </div>
             </div>
           </div>
@@ -673,7 +678,7 @@
                   </ul>
                 </div>
 
-                <article class="body1__product" data-node-id="4134:385">
+                <div class="body1__products"><article class="body1__product" data-node-id="4134:385">
                   <div class="body1__product-photo">
                     <img
                       src="images/heat_1.jpg"
@@ -792,7 +797,7 @@
                       </div>
                     </div>
                   </div>
-                </article>
+                </article></div>
               </div>
             </div>
           </div>
@@ -1245,6 +1250,24 @@
         height="80"
       />
     </a>
+    <nav class="mobile-bottom-nav" aria-label="모바일 하단 메뉴">
+      <a href="#categoryTitle" class="mobile-bottom-nav__item">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 7h24M4 16h24M4 25h24" /></svg>
+        <span>카테고리</span>
+      </a>
+      <a href="./" class="mobile-bottom-nav__item mobile-bottom-nav__item--active" aria-current="page">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="m4 12 12-8 12 8v16H4Z M16 19v9" /></svg>
+        <span>홈</span>
+      </a>
+      <a href="#" class="mobile-bottom-nav__item" data-demo-feature="찜하기">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 28 4.5 16.5C-3 8.5 8 0 16 9c8-9 19-.5 11.5 7.5Z" /></svg>
+        <span>찜하기</span>
+      </a>
+      <a href="#" class="mobile-bottom-nav__item" data-demo-feature="마이">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="8" r="6" /><path d="M3 29V19h26v10" /></svg>
+        <span>마이</span>
+      </a>
+    </nav>
     <dialog class="portfolio-notice" aria-labelledby="portfolioNoticeTitle" aria-describedby="portfolioNoticeDescription">
       <h2 id="portfolioNoticeTitle">포트폴리오 안내</h2>
       <p id="portfolioNoticeDescription"><strong data-notice-feature></strong> 기능은 이 포트폴리오에서 제공하지 않습니다. 실제 쇼핑 및 결제는 유니클로 공식 사이트를 이용해 주세요.</p>
